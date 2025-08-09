@@ -4,28 +4,14 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-     Scanner sc = new Scanner(System.in);
-     int n = sc.nextInt();
-     int [] arr = new int[n];
-     int b;
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
+        Scanner sc = new Scanner(System.in);
+        char c = sc.nextLine().charAt(0);
+        String a = sc.nextLine();
+        int p = 0;
+        for (int i = 0; i < a.length(); i++) {
+            if(a.charAt(i) == c) {
+                p++;
         }
-        for (int i = 0; i < n; i++) {
-            for (int j = i+1; j < n; j++) {
-                if(arr[i] > arr[j]) {
-                    b = arr[j];
-                    arr[j] = arr[i];
-                    arr[i] = b;
-                }
-            }
-
-        }
-        for (int i = 0; i < n; i++) {
-            System.out.println(arr[i]);
-        }
-
-
-    }
-
+    } System.out.println(p);
 }
+    }
